@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 align="center">Welcome to ROR</h1>
+	<h3 align="center">List of users</h3>
+	<% @users.each do |user| %>
+
+	<table border="border" cellpadding="20" cellspacing="0" align="center">
+		<tr>
+			<th>ID</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			
+		</tr>
+		<tr>
+		<td><%=user.id%></td>
+			<td><%=user.firstname%></td>
+			<td><%=user.lastname%></td>
+			
+		</tr>
+	</table>
+	<%end%>
+	
+	<%= link_to "Create user" , new_user_path %>
+</body>
+</html>
+
